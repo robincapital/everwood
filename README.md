@@ -1,6 +1,6 @@
 # Everwood USA — First-draft static website
 
-Plain HTML/CSS/vanilla JS site for **Everwood USA** (US branch of Desafío Ambiente / Everwood). No build step. Designed for **GitHub Pages**.
+Plain HTML/CSS/vanilla JS site for **Everwood USA** (locally owned Miami Beach company in partnership with Desafío Ambiente / Everwood Chile). No build step. Designed for **GitHub Pages**.
 
 **Campaign line:** Plastic to Public Good  
 **Focus:** Biscayne Bay, Miami, Miami Beach  
@@ -157,6 +157,9 @@ A yellow dashed box on the Contact page marks the Formspree insert point.
 
 ## To fill in (placeholders)
 
+- `[team names/photos]` — Miami Beach team on About
+
+
 
 
 Every bracketed placeholder used in the site — replace with verified facts only.
@@ -261,7 +264,7 @@ Instagram: `@everwood_maderaplastica`.
 - Chilean prices exist on everwood.cl — **intentionally omitted** from this US draft (no fabricated or transplanted USD pricing)
 
 ### From business brief (user)
-- US branch of Chilean company; Instagram `@everwood_maderaplastica`
+- Locally owned Miami Beach LLC; Instagram `@everwood_maderaplastica`
 - Sold benches to University of Miami (count unknown → placeholder)
 - Brand partnership / CSR revenue model; audiences listed on Home/About
 - Campaign: “Plastic to Public Good”; Bay plastic → public furniture positioning
@@ -295,7 +298,7 @@ Key public URLs used on the live site:
 - Slat eco-equivalence: https://everwood.cl/producto/liston/
 - 15-year design warranty wording: https://everwood.cl/producto/tablas/ (and related product pages)
 - UM project tiles: https://everwood-usa.com/projects/
-- USA subsidiary framing: https://everwood-usa.com/about-us/
+- Prior everwood-usa.com 'subsidiary' framing is superseded by local ownership + Chile manufacturing partnership on this site
 - Chile partner stories: https://desafioambiente.com/portfolio/desafioalemana-navidad/ · https://desafioambiente.com/portfolio/sendero-sostenible/
 - LEED guidance (products contribute; buildings are certified): facts.md §7 / USGBC credit docs linked therein
 
