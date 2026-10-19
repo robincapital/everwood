@@ -19,25 +19,35 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Everwood USA",
-    "url": "https://everwood-usa.com",
-    "logo": "https://everwood-usa.com/assets/img/logo/everwood-usa_horizontal_green.svg",
-    "parentOrganization": {
-      "@type": "Organization",
-      "name": "Desafío Ambiente / Everwood"
-    },
-    "employee": {
-      "@type": "Person",
-      "name": "Nick Diaz",
-      "jobTitle": "US representative",
-      "homeLocation": {
-        "@type": "Place",
-        "name": "Miami Beach, Florida"
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://everwood-usa.com/#organization",
+        "name": "Everwood USA",
+        "url": "https://everwood-usa.com",
+        "logo": "https://everwood-usa.com/assets/img/logo/everwood-usa_horizontal_green.svg",
+        "founder": { "@id": "https://everwood-usa.com/#nick-diaz" },
+        "parentOrganization": {
+          "@type": "Organization",
+          "name": "Desafío Ambiente / Everwood"
+        }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://everwood-usa.com/#nick-diaz",
+        "name": "Nick Diaz",
+        "jobTitle": "Founder",
+        "worksFor": { "@id": "https://everwood-usa.com/#organization" },
+        "homeLocation": {
+          "@type": "Place",
+          "name": "Miami Beach, Florida"
+        },
+        "url": "https://everwood-usa.com/pages/about.html#founded-miami-beach"
       }
-    }
+    ]
   }
   </script>
+
 
 </head>
 <body>
@@ -78,11 +88,19 @@
           <p>Everwood began as a project of Desafío Ambiente in Santiago, Chile, where recycled plastics are revalorized through injection and extrusion into high-performance construction materials and urban furniture.</p>
           <p>Everwood USA brings that model to South Florida — with a focus on Biscayne Bay, Miami, and Miami Beach — so local plastic waste can become benches, decks, fencing, and site furniture that never rot.</p>
           <p>Founder Anita Farfán leads the Everwood brand under Desafío Ambiente (source: desafioambiente.com).</p>
-          <p><strong>In the US.</strong> Everwood USA is represented in Miami Beach by Nick Diaz, a longtime divemaster who lives on the beach and is regularly on the water cleaning up the Bay. The US focus is getting local plastic out of the water and into useful products.</p>
         </div>
         <div class="split-media ph" data-ph="about-process.jpg">
           <img src="../assets/img/about-process.jpg" alt="Gloved hands holding recycled plastic flakes used to make Everwood" width="1200" height="800" />
         </div>
+      </div>
+    </section>
+
+
+    <section class="section section-mist" id="founded-miami-beach">
+      <div class="container" style="max-width:720px">
+        <p class="eyebrow" style="color:var(--bay-teal)">Local backing</p>
+        <h2>Founded in Miami Beach</h2>
+        <p>Everwood USA was founded and is backed by Nick Diaz, a Miami Beach resident and longtime divemaster who is regularly on the water cleaning up the Bay. Through his other Miami Beach–based businesses, he supports Everwood USA as their socially responsible branch giving back to the community — to preserve our waterways and beaches and build a circular economy where local plastic becomes local public goods. He works alongside the Chilean makers who manufacture the product.</p>
       </div>
     </section>
 

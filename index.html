@@ -19,25 +19,35 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Everwood USA",
-    "url": "https://everwood-usa.com",
-    "logo": "https://everwood-usa.com/assets/img/logo/everwood-usa_horizontal_green.svg",
-    "parentOrganization": {
-      "@type": "Organization",
-      "name": "Desafío Ambiente / Everwood"
-    },
-    "employee": {
-      "@type": "Person",
-      "name": "Nick Diaz",
-      "jobTitle": "US representative",
-      "homeLocation": {
-        "@type": "Place",
-        "name": "Miami Beach, Florida"
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://everwood-usa.com/#organization",
+        "name": "Everwood USA",
+        "url": "https://everwood-usa.com",
+        "logo": "https://everwood-usa.com/assets/img/logo/everwood-usa_horizontal_green.svg",
+        "founder": { "@id": "https://everwood-usa.com/#nick-diaz" },
+        "parentOrganization": {
+          "@type": "Organization",
+          "name": "Desafío Ambiente / Everwood"
+        }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://everwood-usa.com/#nick-diaz",
+        "name": "Nick Diaz",
+        "jobTitle": "Founder",
+        "worksFor": { "@id": "https://everwood-usa.com/#organization" },
+        "homeLocation": {
+          "@type": "Place",
+          "name": "Miami Beach, Florida"
+        },
+        "url": "https://everwood-usa.com/pages/about.html#founded-miami-beach"
       }
-    }
+    ]
   }
   </script>
+
 
 </head>
 <body>
@@ -248,6 +258,12 @@
       </div>
     </section>
 
+
+    <section class="section" style="padding-top:0;padding-bottom:2rem">
+      <div class="container">
+        <p class="text-center" style="font-size:0.95rem;color:var(--muted);max-width:40em;margin:0 auto">Everwood USA is the community-responsibility initiative of Miami Beach founder Nick Diaz, made with Everwood Chile.</p>
+      </div>
+    </section>
     <section class="section">
       <div class="container">
         <div class="cta-band">
