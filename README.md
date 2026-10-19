@@ -92,7 +92,7 @@ Email remains hosted at domain.com; changing these will break mail.
 
 ## How to swap in photos
 
-Real photos from Nick (Oct 2026) are already in `assets/img/` under descriptive names, resized for the web (max ~1800px long side, JPEG ~q80, mostly under 400KB). The official logo is `logo-everwood.png` (PNG with transparency).
+Real photos from Nick (Oct 2026) are already in `assets/img/` under descriptive names, resized for the web (max ~1800px long side, JPEG ~q80, mostly under 400KB). Official logos live in `assets/img/logo/` (all-green + white SVGs; brand green `#0F6938`). Header uses `everwood-usa_horizontal_green.svg`; dark footer uses `everwood-usa_horizontal_white.svg`. Favicons: `favicon.ico` plus PNG sizes 32/48/180/192/512.
 
 To replace any shot later, overwrite the same filename — most HTML references use these names.
 
@@ -122,9 +122,9 @@ To replace any shot later, overwrite the same filename — most HTML references 
 | `product-bench.jpg` | `c832574f` | UM lakeside bench (furniture example) | Products |
 | `chile-fence-gate.jpg` / `project-fence.jpg` | `fe5b14d8` | White gate/fence ranch (**Chile**) | Projects (labeled Chile) |
 | `chile-picnic-playground.jpg` / `project-playground.jpg` | `d4b03aef` | Octagonal school picnic table (**Chile**) | Projects (labeled Chile) |
-| `logo-everwood.png` | `56ed9c76` | Green infinity Everwood logo | Header, footer, favicon source |
-| `logo-everwood-large.png` | `56ed9c76` | Larger logo asset | Optional |
-| `favicon.png` | from logo | Site favicon | All pages |
+| `logo/everwood-usa_horizontal_green.svg` | research exports | All-green horizontal wordmark | Header |
+| `logo/everwood-usa_horizontal_white.svg` | research exports | White horizontal wordmark | Dark footer |
+| `logo/favicon.ico` + `favicon_32/48/180/192/512.png` | research exports | Favicons / apple-touch (180) | All pages |
 | `contact-map.jpg` | `1596f335` | Scenic lakeside (no map asset provided) | Contact |
 
 ### Skipped source files
@@ -161,6 +161,8 @@ Every bracketed placeholder used in the site — replace with verified facts onl
 
 ### University of Miami project
 - `[UM bench count]` — number of benches sold/installed
+- `[UM table count]` — picnic tables
+- `[UM 2024 beautification details]` — scope of 2024 beautification tile
 - `[UM plastic diverted lbs]` — pounds (or kg) of plastic represented by that project
 - `[UM install year]` — year of install or delivery
 - `[UM campus location]` — campus zone / building area
@@ -175,7 +177,10 @@ Every bracketed placeholder used in the site — replace with verified facts onl
 ### Products / catalog
 - `[confirm US SKUs]` — which Chilean catalog sizes/colors ship or manufacture for US
 - `[confirm]` (colors) — US color availability
-- `[confirm certification docs for US marketing]` — LEED® / IDEM claims as stated on everwood-usa.com; keep legal/marketing aligned
+- `[pending from factory]` — ISO 14021 recycled-content declaration (post- vs pre-consumer % by weight) required before strong LEED recycled-content claims
+- `[confirm US warranty]` — everwood.cl states a 15-year design warranty; no US warranty statement found on everwood-usa.com
+- Fire / UV / structural test reports (ASTM etc.) — **not found**; do not invent ratings
+- `[confirm US SKUs]` and US color availability
 
 
 ### Shop / Shopify
@@ -226,7 +231,7 @@ Instagram: `@everwood_maderaplastica`.
 ### From [everwood-usa.com](https://everwood-usa.com) (WebFetch, Oct 2026)
 - Positioning around plastic wood / Everwood materials; circular economy and SDG alignment; smart cities/neighborhoods language
 - Spec list: Durable; Water-Resistant; Weather-Resistant; No Discoloration; Does not rot or splinter; Flame Retardant; Thermal insulator; Recycled Origin; Does not require maintenance
-- Claims certification/validation by LEED® and IDEM for sustainable construction guidelines
+- Prior site claimed LEED/IDEM “certification/validation” — **removed** from this draft; replaced with accurate “can contribute toward LEED v4.1 MR recycled-content credits; documentation on request” (facts.md §7). IDEM → IDIEM Catálogo Verde listing.
 - Contact (original site): `+1 (305) 905-4969`; `sales@everwood-usa.com`; former Doral address replaced on this draft with `11 Island Ave, Miami Beach, FL 33139`
 - Logo path under WP uploads (see photo reuse list)
 
@@ -261,8 +266,31 @@ Instagram: `@everwood_maderaplastica`.
 - `screenshots/projects-desktop-1280.png`
 - `screenshots/shop-desktop-1280.png`
 - `screenshots/full-circle-desktop-1280.png`
+- `screenshots/products-desktop-1280.png`
+- `screenshots/impact-desktop-1280.png`
 
 ---
+
+
+## Pollution imagery
+
+Local plastic-pollution photos live in `assets/img/pollution/` (web-optimized, &lt;400KB each). Facts and quotes: `/workspace/everwood-research/pollution/facts.md`. Required attributions: `pages/credits.html` and `/workspace/everwood-research/pollution/credits.csv`. Military/DoD photos do not imply endorsement. Brand packaging in photos is illustrative only — not partnership or endorsement.
+
+## Sources
+
+Primary research compilation: `/workspace/everwood-research/facts.md` (compiled 2026-10-19; every figure has a URL and quote).
+
+Key public URLs used on the live site:
+- Group impact (2023): https://revistaemprende.cl/startups-chilena-ha-revalorizaddas-mas-de-tres-mil-tonelas-de-plastico/ and https://portalinnova.cl/convertir-residuos-plasticos-en-activos-sustentables-en-chile-ya-es-una-realidad/
+- Peru press (Jul 2024, ~3,000 t / 8 years): https://larepublica.pe/nota-de-prensa/2024/07/11/la-primera-planta-de-reciclaje-de-plasticos-complejos-se-inaugura-en-lima-peru-638077
+- Slat eco-equivalence: https://everwood.cl/producto/liston/
+- 15-year design warranty wording: https://everwood.cl/producto/tablas/ (and related product pages)
+- UM project tiles: https://everwood-usa.com/projects/
+- USA subsidiary framing: https://everwood-usa.com/about-us/
+- Chile partner stories: https://desafioambiente.com/portfolio/desafioalemana-navidad/ · https://desafioambiente.com/portfolio/sendero-sostenible/
+- LEED guidance (products contribute; buildings are certified): facts.md §7 / USGBC credit docs linked therein
+
+**Do not claim:** products are “LEED certified”; IDEM “validation” (use “Listed in IDIEM’s Catálogo Verde (Chile)”); ISO 9001/14001; B Corp; specific fire-spread ratings without reports; US-only totals using group press figures.
 
 ## License / status
 

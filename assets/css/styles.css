@@ -1,11 +1,11 @@
 /* Everwood USA — Miami coastal design system */
 :root {
   /* Brand green from Everwood logo (#126B3A), with coastal bay accents */
-  --brand-green: #126b3a;
-  --brand-green-deep: #0a4a28;
+  --brand-green: #0F6938;
+  --brand-green-deep: #0a4526;
   --brand-green-light: #2d9b5a;
   --bay-deep: #0a3d4a;
-  --bay-teal: #126b3a; /* primary accent shifted to brand green */
+  --bay-teal: #0F6938; /* brand green */
   --bay-mid: #2a9d8f;  /* keep teal mid for coastal highlights */
   --bay-light: #5ecf8e;
   --bay-mist: #e8f5ee;
@@ -101,9 +101,20 @@ ul { list-style: none; }
 }
 
 .logo-img {
-  height: 40px;
+  height: 42px;
   width: auto;
   display: block;
+  max-width: min(200px, 42vw);
+}
+.logo-img-footer {
+  height: 36px;
+  width: auto;
+  display: block;
+  max-width: min(180px, 50vw);
+  filter: none; /* white SVG already suited for dark footer */
+}
+@media (max-width: 400px) {
+  .logo-img { height: 34px; max-width: 150px; }
 }
 .logo-text-wrap {
   display: flex;
@@ -117,12 +128,12 @@ ul { list-style: none; }
   color: var(--brand-green);
   text-transform: uppercase;
 }
-.site-footer .logo-img {
+.site-footer .logo-img,
+.site-footer .logo-img-footer {
   height: 36px;
-  /* invert-ish not needed — logo is green on transparent; on dark footer use filter */
-  filter: brightness(1.15);
+  max-width: min(180px, 50vw);
+  filter: none;
 }
-.site-footer .logo-usa { color: var(--bay-light); }
 
 .logo-sub {
   display: block;
@@ -799,12 +810,12 @@ ul { list-style: none; }
   color: var(--brand-green);
   text-transform: uppercase;
 }
-.site-footer .logo-img {
+.site-footer .logo-img,
+.site-footer .logo-img-footer {
   height: 36px;
-  /* invert-ish not needed — logo is green on transparent; on dark footer use filter */
-  filter: brightness(1.15);
+  max-width: min(180px, 50vw);
+  filter: none;
 }
-.site-footer .logo-usa { color: var(--bay-light); }
 
 .logo-sub { color: rgba(255,255,255,0.5); }
 .footer-brand p { font-size: 0.9rem; max-width: 28em; }
@@ -1068,4 +1079,204 @@ ul { list-style: none; }
 .nav-list .nav-hide-sm { }
 @media (max-width: 980px) and (min-width: 861px) {
   .nav-list a { padding: 0.4rem 0.5rem; font-size: 0.85rem; }
+}
+
+
+/* LEED / green building (self-made badge — not a USGBC trademark mark) */
+.leed-block {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1.25rem;
+  align-items: start;
+  background: var(--bay-mist);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem 1.75rem;
+}
+@media (max-width: 560px) {
+  .leed-block { grid-template-columns: 1fr; }
+}
+.leed-badge {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  background: var(--brand-green);
+  color: white;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 1.25;
+  padding: 0.5rem;
+  flex-shrink: 0;
+  box-shadow: var(--shadow-sm);
+}
+.leed-block h3 {
+  font-family: var(--font-display);
+  color: var(--bay-deep);
+  font-size: 1.2rem;
+  margin-bottom: 0.4rem;
+}
+.leed-block p { color: var(--ink-soft); font-size: 0.95rem; }
+.leed-footnote {
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-top: 0.75rem;
+}
+.spec-callout {
+  background: white;
+  border-left: 4px solid var(--brand-green);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  padding: 1.25rem 1.5rem;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border);
+  border-left-width: 4px;
+}
+.spec-callout h3 {
+  font-family: var(--font-display);
+  color: var(--bay-deep);
+  font-size: 1.15rem;
+  margin-bottom: 0.4rem;
+}
+.spec-callout .stat {
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  color: var(--brand-green);
+  font-weight: 600;
+}
+.sources-note {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-top: 2rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border);
+}
+.sources-note a { word-break: break-all; }
+.line-card-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--brand-green);
+  margin-bottom: 0.5rem;
+}
+
+/* Pollution / problem band */
+.problem-band {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 0;
+  background: var(--bay-deep);
+  color: white;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+@media (max-width: 800px) {
+  .problem-band { grid-template-columns: 1fr; }
+}
+.problem-band-media {
+  display: grid;
+  grid-template-rows: 1.2fr 1fr;
+  gap: 0.35rem;
+  min-height: 320px;
+  background: #062028;
+}
+.problem-band-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.problem-band-copy {
+  padding: 2rem 2.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.problem-band-copy h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  margin-bottom: 0.85rem;
+  color: white;
+}
+.problem-band-copy p { color: rgba(255,255,255,0.88); font-size: 0.98rem; margin-bottom: 0.75rem; }
+.problem-band-copy .stat-line {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  color: var(--bay-light);
+  font-weight: 600;
+  margin: 0.35rem 0;
+}
+.photo-cap {
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.55);
+  margin-top: 0.35rem;
+}
+.photo-cap a { color: rgba(255,255,255,0.7); }
+.hist-tag {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  background: #fff3cd;
+  color: #665200;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+}
+.quote-block {
+  border-left: 3px solid var(--brand-green);
+  padding: 0.75rem 0 0.75rem 1.1rem;
+  margin: 1rem 0;
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+}
+.quote-block cite {
+  display: block;
+  font-size: 0.8rem;
+  font-style: normal;
+  color: var(--muted);
+  margin-top: 0.45rem;
+}
+.credits-list {
+  display: grid;
+  gap: 1rem;
+}
+.credits-item {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem 1.15rem;
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+}
+.credits-item strong { color: var(--bay-deep); }
+.credits-item a { word-break: break-word; }
+.gallery-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem;
+}
+@media (max-width: 900px) {
+  .gallery-4 { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 500px) {
+  .gallery-4 { grid-template-columns: 1fr; }
+}
+.gallery-4 figure {
+  margin: 0;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--sand);
+  border: 1px solid var(--border);
+}
+.gallery-4 img { width: 100%; height: 160px; object-fit: cover; }
+.gallery-4 figcaption {
+  font-size: 0.72rem;
+  color: var(--muted);
+  padding: 0.45rem 0.55rem 0.6rem;
+  line-height: 1.35;
 }
