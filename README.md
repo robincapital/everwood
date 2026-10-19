@@ -183,6 +183,13 @@ Every bracketed placeholder used in the site — replace with verified facts onl
 - `[confirm US SKUs]` and US color availability
 
 
+
+### Molded retail / CSR merch
+- `[price]` — coaster set, laptop stand, phone stand keychain, beach paddle (no Chilean peso prices)
+- `[confirm US terms]` — minimum orders and free laser engraving (Chile sheets: from 10 packs/units)
+- `[confirm product]` — whether the yellow beach paddle is a confirmed Everwood SKU for US retail
+- Shopify IDs: `[SHOPIFY_PRODUCT_ID_COASTERS]`, `[SHOPIFY_PRODUCT_ID_LAPTOP_STAND]`, `[SHOPIFY_PRODUCT_ID_PHONE_STAND]`, `[SHOPIFY_PRODUCT_ID_BEACH_PADDLE]`
+
 ### Shop / Shopify
 - `[price]` — Bay Edition pendant, planter, residential bench (no invented prices)
 - `[confirm product]` — planter box and residential bench as retail SKUs
