@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact — Everwood USA</title>
+  <meta name="description" content="Everwood USA — Contact. Recycled plastic lumber and public furniture for Miami and Biscayne Bay." />
+  <link rel="icon" href="../assets/img/favicon.jpg" type="image/jpeg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&amp;family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="../index.html">
+        <span class="logo-mark">EW</span>
+        <span>Everwood <span style="font-weight:500">USA</span><span class="logo-sub">Plastic lumber · Miami</span></span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav class="site-nav" aria-label="Primary">
+        <ul class="nav-list">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="partnerships.html">Partnerships</a></li>
+          <li><a href="impact.html">Impact</a></li>
+          <li><a class="nav-cta" href="contact.html" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+
+    <section class="page-hero">
+      <div class="container">
+        <p class="breadcrumb"><a href="../index.html">Home</a> / Contact</p>
+        <p class="eyebrow">Let’s talk</p>
+        <h1>Contact Everwood USA</h1>
+        <p class="lead">Municipalities, universities, hotels, brands, and architects — tell us about your site or waste stream.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="grid-2" style="align-items:start">
+          <div class="form-card">
+            <h2 style="font-family:var(--font-display);color:var(--bay-deep);font-size:1.5rem;margin-bottom:1rem">Send a message</h2>
+            <!--
+              STATIC HOSTING FORM:
+              Default behavior = mailto fallback (works with no backend).
+              FORMSPREE: replace action="" below with your endpoint, e.g.
+              action="https://formspree.io/f/xxxxxxxx" method="POST"
+              See the yellow marker under the form.
+            -->
+            <form id="contact-form" action="" method="POST" data-mailto="sales@everwood-usa.com">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="name">Name</label>
+                  <input id="name" name="name" type="text" required autocomplete="name" />
+                </div>
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input id="email" name="email" type="email" required autocomplete="email" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="organization">Organization</label>
+                <input id="organization" name="organization" type="text" autocomplete="organization" />
+              </div>
+              <div class="form-group">
+                <label for="interest">I am interested in</label>
+                <select id="interest" name="interest">
+                  <option value="General inquiry">General inquiry</option>
+                  <option value="Brand partnership / CSR">Brand partnership / CSR</option>
+                  <option value="Municipal or campus project">Municipal or campus project</option>
+                  <option value="Products &amp; specifications">Products &amp; specifications</option>
+                  <option value="Architect / design support">Architect / design support</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required placeholder="Site type, timeline, waste stream, or product needs…"></textarea>
+              </div>
+              <button class="btn btn-solid" type="submit">Send message</button>
+              <p class="form-hint">With no Formspree endpoint set, submit opens your email client (mailto) addressed to sales@everwood-usa.com.</p>
+            </form>
+
+            <div class="formspree-marker" role="note">
+              <strong>FORMSPREE ENDPOINT — INSERT HERE</strong><br />
+              1. Create a form at <a href="https://formspree.io" rel="noopener">formspree.io</a><br />
+              2. Set this form’s <code>action</code> to <code>https://formspree.io/f/YOUR_ID</code> and keep <code>method="POST"</code><br />
+              3. Optionally add <code>&lt;input type="hidden" name="_subject" value="Everwood USA web inquiry"&gt;</code><br />
+              4. When <code>action</code> starts with <code>https://</code>, the mailto script steps aside and the browser POSTs normally.
+            </div>
+          </div>
+
+          <div>
+            <div class="contact-details">
+              <div class="contact-item">
+                <h4>Email</h4>
+                <p><a href="mailto:sales@everwood-usa.com">sales@everwood-usa.com</a></p>
+                <p style="font-size:0.8rem;color:var(--muted)">From everwood-usa.com</p>
+              </div>
+              <div class="contact-item">
+                <h4>Phone</h4>
+                <p><a href="tel:+13059054969">+1 (305) 905-4969</a></p>
+                <p style="font-size:0.8rem;color:var(--muted)">From everwood-usa.com</p>
+              </div>
+              <div class="contact-item">
+                <h4>Address</h4>
+                <p>Everwood-USA<br />11475 NW 34th St<br />Doral, FL 33178</p>
+                <p style="font-size:0.8rem;color:var(--muted)">From everwood-usa.com</p>
+              </div>
+              <div class="contact-item">
+                <h4>Instagram</h4>
+                <p><a href="https://www.instagram.com/everwood_maderaplastica/" rel="noopener">@everwood_maderaplastica</a></p>
+              </div>
+              <div class="contact-item">
+                <h4>Parent company (Chile)</h4>
+                <p><a href="mailto:contacto@desafioambiente.cl">contacto@desafioambiente.cl</a><br />
+                El Pinar 205, San Joaquín, Santiago</p>
+                <p style="font-size:0.8rem;color:var(--muted)">From desafioambiente.com — not a US mailing address</p>
+              </div>
+            </div>
+            <div class="ph mt-3" data-ph="contact-map-doral.jpg" style="border-radius:var(--radius-lg);overflow:hidden;aspect-ratio:16/10">
+              <img src="../assets/img/contact-map-doral.jpg" alt="Map / Doral location placeholder" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="logo" href="../index.html"><span class="logo-mark">EW</span><span>Everwood USA</span></a>
+          <p>US branch of Desafío Ambiente / Everwood. Turning recycled plastic into wood-like materials and public furniture.</p>
+          <p class="campaign-tag mt-2">“Plastic to Public Good”</p>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <a href="about.html">About</a>
+          <a href="products.html">Products</a>
+          <a href="projects.html">Projects</a>
+          <a href="impact.html">Impact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Work with us</h4>
+          <a href="partnerships.html">Partnerships</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <a href="https://everwood-usa.com" rel="noopener">everwood-usa.com</a>
+          <a href="https://desafioambiente.com" rel="noopener">desafioambiente.com</a>
+          <a href="https://www.instagram.com/everwood_maderaplastica/" rel="noopener">@everwood_maderaplastica</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span id="y"></span> Everwood USA. First-draft site.</span>
+        <span>Doral, FL · Miami &amp; Biscayne Bay focus</span>
+      </div>
+    </div>
+  </footer>
+  <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
