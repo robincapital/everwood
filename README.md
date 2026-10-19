@@ -55,57 +55,52 @@ Then visit `http://localhost:8080`.
 
 ## How to swap in photos
 
-Placeholder JPEGs live in `assets/img/` with **descriptive filenames**. Each file is a labeled gradient stand-in. Replace them **in place** (same filename) with real photos — no HTML edits required if dimensions are reasonable.
+Real photos from Nick (Oct 2026) are already in `assets/img/` under descriptive names, resized for the web (max ~1800px long side, JPEG ~q80, mostly under 400KB). The official logo is `logo-everwood.png` (PNG with transparency).
 
-| File | Suggested content |
-|------|-------------------|
-| `hero-bay.jpg` | Biscayne Bay / Miami waterfront hero |
-| `hero-planks-closeup.jpg` | Close-up of Everwood planks / grain |
-| `about-process.jpg` | Shredding, extrusion, or workshop |
-| `about-team.jpg` | Team or US workshop / showroom |
-| `product-planks.jpg` | Boards / tablas product shot |
-| `product-beams.jpg` | Beams / vigas |
-| `product-posts.jpg` | Posts / polines / cuartón |
-| `product-deck.jpg` | Deck boards installed or stacked |
-| `product-bench.jpg` | Finished bench / urban furniture |
-| `product-colors.jpg` | Color swatch board or multi-color stack |
-| `um-benches-1.jpg` | University of Miami benches (hero) |
-| `um-benches-2.jpg` | UM benches detail |
-| `um-campus.jpg` | Campus context for UM install |
-| `project-fence.jpg` | Fence / perimeter application |
-| `project-playground.jpg` | Park / playground furniture |
-| `partnership-brand-waste.jpg` | Brand waste bales or collection |
-| `partnership-workshop.jpg` | Manufacturing / transformation |
-| `partnership-bench-branded.jpg` | Branded bench in public space |
-| `impact-bay-cleanup.jpg` | Bay / cleanup / coastal plastic context |
-| `impact-circular.jpg` | Circular process or before/after |
-| `contact-map-doral.jpg` | Map or exterior of Doral location |
-| `logo-everwood.jpg` | Official logo (optional; header uses CSS mark today) |
-| `favicon.jpg` | Favicon (consider exporting a real `.ico` / `.png` later) |
+To replace any shot later, overwrite the same filename — most HTML references use these names.
 
-**Tips**
+| File | Source prefix | What’s in the frame | Used on |
+|------|---------------|---------------------|---------|
+| `hero-bay.jpg` | `1596f335` | UM lakeside bench, wide (brick path, palms, glass building) | Home hero; Contact scenic |
+| `um-benches-1.jpg` | `1596f335` | Same wide lakeside bench | Home + Projects case study |
+| `um-benches-2.jpg` | `c832574f` | Lakeside bench, closer | Home + Projects |
+| `um-benches-vertical.jpg` | `b0d5c8ef` | Same bench, vertical / palms & sky | Projects tall card |
+| `um-banner.jpg` | `ab04ffe2` | Bench beside UM orange Centennial Village / Architecture banner | Home, Projects, Partnerships |
+| `um-picnic.jpg` | `5847f412` | Picnic table on lawn by lake | Projects |
+| `um-picnic-2.jpg` | `e4cdc4f6` | Another picnic-table angle | Available (not linked yet; alternate) |
+| `um-architecture.jpg` | `e27fd924` | School of Architecture walkway table + bench | Projects |
+| `about-community.jpg` / `about-team.jpg` | `5a661060` | Person on green tricycle at UM Sustainability Garden (unnamed) | About, Impact |
+| `impact-qr-plaque.jpg` | `2712211f` | Metal QR plaque for furniture | Impact, Partnerships |
+| `plastic-to-good.jpg` / `hero-planks-closeup.jpg` / `impact-circular.jpg` / `impact-bay-cleanup.jpg` | `ebaa5022` | Plank → colorful shredded flakes | Home, Impact, Products, Partnerships |
+| `about-process.jpg` / `partnership-workshop.jpg` / `partnership-brand-waste.jpg` | `b75693a6` | Gloved hands with flakes (+ watermark) | About, Home, Partnerships |
+| `product-water.jpg` | `77f0a08d` | Water beading on brown & teal planks | Products |
+| `product-colors-wet.jpg` | `dc33a025` | Colorful wet boards close-up | Products |
+| `product-colors-wet-2.jpg` | `dcfa07cd` | Second wet-boards close-up | Available alternate |
+| `product-colors.jpg` | `a4e67b70` | Six color swatches | Products colors |
+| `product-deck-work.jpg` | `2774d732` | Deck + biscuit joiner | Products |
+| `product-planks.jpg` | `989a7633` | Brown board studio | Products |
+| `product-strip.jpg` / `product-beams.jpg` | `c41859c9` | Brown strip/batten studio | Products |
+| `product-deck.jpg` | `6af0bddc` | Black & gray grooved deck boards | Products |
+| `product-posts.jpg` | `be30a503` | Assorted profiles + round post | Products |
+| `product-bench.jpg` | `c832574f` | UM lakeside bench (furniture example) | Products |
+| `chile-fence-gate.jpg` / `project-fence.jpg` | `fe5b14d8` | White gate/fence ranch (**Chile**) | Projects (labeled Chile) |
+| `chile-picnic-playground.jpg` / `project-playground.jpg` | `d4b03aef` | Octagonal school picnic table (**Chile**) | Projects (labeled Chile) |
+| `logo-everwood.png` | `56ed9c76` | Green infinity Everwood logo | Header, footer, favicon source |
+| `logo-everwood-large.png` | `56ed9c76` | Larger logo asset | Optional |
+| `favicon.png` | from logo | Site favicon | All pages |
+| `contact-map.jpg` | `1596f335` | Scenic lakeside (no map asset provided) | Contact |
 
-- Prefer landscape ~1600–2400px wide for heroes; compress for web (e.g. 80–85% JPEG or WebP later).
-- CSS classes `.ph` / gradients remain as fallbacks if an image path 404s.
-- After replacing files, hard-refresh the browser (cache).
+### Skipped source files
+- `a4bc89a3` — color blocks with phone/hand in frame (skipped; swatches `a4e67b70` used instead)
+- `28e6490b` — near-duplicate of Architecture walkway (`e27fd924` used)
+- `349351fa` — extra picnic-table angle (kept `5847f412` + `e4cdc4f6` as `um-picnic` / `um-picnic-2`)
+- `459646b5` — alternate Sustainability Garden shot (`5a661060` used)
+- `99ddef81` — video (`.mp4`); not used on this static first draft
+- Prior screenshot PNGs in the attachments folder — not site assets
 
-### Images from existing sites worth reusing (do not copy into this repo until you have rights)
+### Images from live sites (optional future reuse)
+Still valid if you want extras beyond Nick’s set: everwood-usa.com WP gallery; desafioambiente.com / everwood.cl product shots; Instagram `@everwood_maderaplastica`. Clear rights before adding.
 
-From **everwood-usa.com** (WordPress uploads / gallery):
-
-- Site logo: `https://everwood-usa.com/wp-content/uploads/2023/08/cropped-Logo.png`
-- Any “Project Photo Gallery — Created by Everwood” images on the homepage (URLs not fully enumerated in text fetch — pull from the live gallery in WP media)
-
-From **desafioambiente.com** / **everwood.cl**:
-
-- Material and mobiliario portfolio photography on desafioambiente.com (Materials, Mobiliario sections)
-- Product photography on everwood.cl product pages (tablas, vigas, polines, deck, cuartón)
-- Process / workshop imagery from Desafío Ambiente project posts (e.g. Torres del Paine trail plastics story — for *parent* storytelling only, not as Miami proof)
-- Instagram [@everwood_maderaplastica](https://www.instagram.com/everwood_maderaplastica/) feed for lifestyle and install shots
-
-**Clear rights / brand approval before republishing.** This draft intentionally ships only generated placeholders.
-
----
 
 ## Enable Formspree on Contact
 
@@ -145,15 +140,14 @@ Every bracketed placeholder used in the site — replace with verified facts onl
 - `[confirm]` (colors) — US color availability
 - `[confirm certification docs for US marketing]` — LEED® / IDEM claims as stated on everwood-usa.com; keep legal/marketing aligned
 
-### Contact (already sourced — re-verify if anything changed)
-Contact block currently uses **live values from everwood-usa.com** (fetched Oct 2026):
-- Email: `sales@everwood-usa.com`
-- Phone: `+1 (305) 905-4969`
-- Address: `11475 NW 34th St, Doral, FL 33178`
+### Contact
+- Email: `sales@everwood-usa.com` (from everwood-usa.com — keep for now)
+- Phone: `+1 (305) 905-4969` (from everwood-usa.com — **new number coming later**)
+- Address: `11 Island Ave, Miami Beach, FL 33139` (**updated**; replaces former Doral address)
 
 Chile parent (desafioambiente.com): `contacto@desafioambiente.cl`, El Pinar 205, San Joaquín, Santiago.
 
-Instagram handle used as given in the brief: `@everwood_maderaplastica`.
+Instagram: `@everwood_maderaplastica`.
 
 **Do not invent:** tonnage, prices, testimonials, quotes, or client names other than University of Miami.
 
@@ -179,7 +173,7 @@ Instagram handle used as given in the brief: `@everwood_maderaplastica`.
 - Positioning around plastic wood / Everwood materials; circular economy and SDG alignment; smart cities/neighborhoods language
 - Spec list: Durable; Water-Resistant; Weather-Resistant; No Discoloration; Does not rot or splinter; Flame Retardant; Thermal insulator; Recycled Origin; Does not require maintenance
 - Claims certification/validation by LEED® and IDEM for sustainable construction guidelines
-- Contact: `+1 (305) 905-4969`; `11475 NW 34th St, Doral, FL 33178`; `sales@everwood-usa.com`
+- Contact (original site): `+1 (305) 905-4969`; `sales@everwood-usa.com`; former Doral address replaced on this draft with `11 Island Ave, Miami Beach, FL 33139`
 - Logo path under WP uploads (see photo reuse list)
 
 ### From [desafioambiente.com](https://desafioambiente.com) (WebFetch / search, Oct 2026)
@@ -208,10 +202,9 @@ Instagram handle used as given in the brief: `@everwood_maderaplastica`.
 
 ## Screenshots
 
-After generation, desktop and mobile Home captures are stored in:
-
 - `screenshots/home-desktop-1280.png`
 - `screenshots/home-mobile-390.png`
+- `screenshots/projects-desktop-1280.png`
 
 ---
 

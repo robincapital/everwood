@@ -1,10 +1,14 @@
 /* Everwood USA — Miami coastal design system */
 :root {
+  /* Brand green from Everwood logo (#126B3A), with coastal bay accents */
+  --brand-green: #126b3a;
+  --brand-green-deep: #0a4a28;
+  --brand-green-light: #2d9b5a;
   --bay-deep: #0a3d4a;
-  --bay-teal: #1a6b7a;
-  --bay-mid: #2a9d8f;
-  --bay-light: #4ecdc4;
-  --bay-mist: #e8f6f5;
+  --bay-teal: #126b3a; /* primary accent shifted to brand green */
+  --bay-mid: #2a9d8f;  /* keep teal mid for coastal highlights */
+  --bay-light: #5ecf8e;
+  --bay-mist: #e8f5ee;
   --sand: #f5efe6;
   --sand-dark: #e8dcc8;
   --wood: #c4a574;
@@ -14,9 +18,9 @@
   --ink-soft: #3d5256;
   --muted: #6b7f83;
   --white: #ffffff;
-  --border: rgba(26, 107, 122, 0.15);
-  --shadow: 0 12px 40px rgba(10, 61, 74, 0.12);
-  --shadow-sm: 0 4px 16px rgba(10, 61, 74, 0.08);
+  --border: rgba(18, 107, 58, 0.15);
+  --shadow: 0 12px 40px rgba(10, 61, 40, 0.12);
+  --shadow-sm: 0 4px 16px rgba(10, 61, 40, 0.08);
   --radius: 12px;
   --radius-lg: 20px;
   --max: 1120px;
@@ -95,6 +99,31 @@ ul { list-style: none; }
   font-size: 0.85rem;
   font-weight: 700;
 }
+
+.logo-img {
+  height: 40px;
+  width: auto;
+  display: block;
+}
+.logo-text-wrap {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+}
+.logo-usa {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--brand-green);
+  text-transform: uppercase;
+}
+.site-footer .logo-img {
+  height: 36px;
+  /* invert-ish not needed — logo is green on transparent; on dark footer use filter */
+  filter: brightness(1.15);
+}
+.site-footer .logo-usa { color: var(--bay-light); }
+
 .logo-sub {
   display: block;
   font-size: 0.65rem;
@@ -173,7 +202,7 @@ ul { list-style: none; }
   display: flex;
   align-items: flex-end;
   overflow: hidden;
-  background: linear-gradient(160deg, var(--bay-deep) 0%, var(--bay-teal) 45%, #3d8b7a 70%, var(--wood) 100%);
+  background: linear-gradient(160deg, var(--brand-green-deep) 0%, var(--bay-deep) 40%, var(--bay-mid) 70%, var(--wood) 100%);
   color: white;
 }
 .hero-media {
@@ -690,7 +719,7 @@ ul { list-style: none; }
   text-align: center;
   padding: 3.5rem 1.5rem;
   border-radius: var(--radius-lg);
-  background: linear-gradient(135deg, var(--bay-deep), var(--bay-teal) 60%, var(--bay-mid));
+  background: linear-gradient(135deg, var(--brand-green-deep), var(--brand-green) 55%, var(--bay-mid));
   color: white;
 }
 .cta-band h2 {
@@ -725,7 +754,32 @@ ul { list-style: none; }
   .footer-grid { grid-template-columns: 1fr; }
 }
 .footer-brand .logo { color: white; margin-bottom: 0.75rem; }
-.footer-brand .logo-sub { color: rgba(255,255,255,0.5); }
+.footer-brand 
+.logo-img {
+  height: 40px;
+  width: auto;
+  display: block;
+}
+.logo-text-wrap {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+}
+.logo-usa {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--brand-green);
+  text-transform: uppercase;
+}
+.site-footer .logo-img {
+  height: 36px;
+  /* invert-ish not needed — logo is green on transparent; on dark footer use filter */
+  filter: brightness(1.15);
+}
+.site-footer .logo-usa { color: var(--bay-light); }
+
+.logo-sub { color: rgba(255,255,255,0.5); }
 .footer-brand p { font-size: 0.9rem; max-width: 28em; }
 .footer-col h4 {
   color: white;
