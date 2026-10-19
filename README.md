@@ -41,10 +41,47 @@ Then visit `http://localhost:8080`.
    - **Folder:** `/ (root)`  
 5. Save. After a minute or two the site is at `https://YOUR_ORG.github.io/YOUR_REPO/` (or the custom domain you configure).
 
-### Custom domain (optional)
+### Custom domain
 
-- Add a `CNAME` file at the repo root containing your domain (e.g. `www.everwood-usa.com`).
-- Point DNS (A/AAAA or CNAME) per [GitHub Pages custom domain docs](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site).
+**Domain:** `everwood-usa.com` (this repo includes a root `CNAME` file with that host).
+
+The domain stays registered at **domain.com**, with nameservers `ns1.domain.com` / `ns2.domain.com`. Configure DNS **in domain.com** as follows for GitHub Pages — and **do not** change mail-related records.
+
+#### DNS records to set (GitHub Pages)
+
+| Type | Host / name | Value |
+|------|-------------|--------|
+| A | `@` (apex) | `185.199.108.153` |
+| A | `@` (apex) | `185.199.109.153` |
+| A | `@` (apex) | `185.199.110.153` |
+| A | `@` (apex) | `185.199.111.153` |
+| AAAA (optional) | `@` | `2606:50c0:8000::153` |
+| AAAA (optional) | `@` | `2606:50c0:8001::153` |
+| AAAA (optional) | `@` | `2606:50c0:8002::153` |
+| AAAA (optional) | `@` | `2606:50c0:8003::153` |
+| CNAME | `www` | `robincapital.github.io` |
+
+GitHub’s current A/AAAA set is documented in [GitHub Pages custom domains](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site).
+
+#### DNS records to leave alone (email at domain.com)
+
+Do **not** edit or delete:
+
+- MX for the apex: `30 mx.everwood-usa.com` (priority/host as currently set)
+- `mx.everwood-usa.com`
+- `mail.everwood-usa.com`
+- The SPF **TXT** record
+
+Email remains hosted at domain.com; changing these will break mail.
+
+#### Enable Pages + HTTPS
+
+1. Push this repo to GitHub (e.g. under `robincapital`).
+2. **Settings → Pages**: deploy from branch `main`, folder `/ (root)`.
+3. Under **Custom domain**, enter `everwood-usa.com` (the `CNAME` file should match) and save; wait for DNS check.
+4. Enable **Enforce HTTPS** once the certificate is ready.
+5. Optionally redirect `www` → apex (or the reverse) in Pages settings after both resolve.
+
 
 ### Project site vs user site
 
@@ -140,6 +177,21 @@ Every bracketed placeholder used in the site — replace with verified facts onl
 - `[confirm]` (colors) — US color availability
 - `[confirm certification docs for US marketing]` — LEED® / IDEM claims as stated on everwood-usa.com; keep legal/marketing aligned
 
+
+### Shop / Shopify
+- `[price]` — Bay Edition pendant, planter, residential bench (no invented prices)
+- `[confirm product]` — planter box and residential bench as retail SKUs
+- `[confirm]` — planter color/size options; residential bench specs
+- `[SHOPIFY_PRODUCT_ID_PENDANT]`, `[SHOPIFY_PRODUCT_ID_PLANTER]`, `[SHOPIFY_PRODUCT_ID_BENCH_RES]`
+- `SHOPIFY_DOMAIN`, `STOREFRONT_ACCESS_TOKEN` — in the commented Buy Button snippet on `pages/shop.html`
+
+### Full Circle
+- `[date]`, `[beach]` — each upcoming cleanup row
+- Formspree endpoint for cleanup sign-up (`#fullcircle-form`)
+- Trace / QR lookup backend (UI marked coming soon)
+- Real `beach-litter-*.jpg` cleanup photos (slot: `beach-litter-1.jpg`)
+- Real `pendant-bay-edition.jpg` product photography
+
 ### Contact
 - Email: `sales@everwood-usa.com` (from everwood-usa.com — keep for now)
 - Phone: `+1 (305) 905-4969` (from everwood-usa.com — **new number coming later**)
@@ -164,6 +216,8 @@ Instagram: `@everwood_maderaplastica`.
 | Partnerships | `pages/partnerships.html` |
 | Impact | `pages/impact.html` |
 | Contact | `pages/contact.html` |
+| Shop | `pages/shop.html` |
+| Full Circle | `pages/full-circle.html` |
 
 ---
 
@@ -205,6 +259,8 @@ Instagram: `@everwood_maderaplastica`.
 - `screenshots/home-desktop-1280.png`
 - `screenshots/home-mobile-390.png`
 - `screenshots/projects-desktop-1280.png`
+- `screenshots/shop-desktop-1280.png`
+- `screenshots/full-circle-desktop-1280.png`
 
 ---
 

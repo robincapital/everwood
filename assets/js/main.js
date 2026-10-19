@@ -45,4 +45,64 @@
       window.location.href = "mailto:" + to + "?subject=" + subject + "&body=" + body;
     });
   }
+
+
+  // Prefill contact interest from ?interest= or ?subject=
+  var params = new URLSearchParams(window.location.search);
+  var interestParam = params.get("interest") || params.get("subject");
+  var interestSelect = document.getElementById("interest");
+  if (interestSelect && interestParam) {
+    var matched = false;
+    Array.prototype.forEach.call(interestSelect.options, function (opt) {
+      if (opt.value.toLowerCase() === interestParam.toLowerCase() ||
+          opt.text.toLowerCase() === interestParam.toLowerCase()) {
+        interestSelect.value = opt.value;
+        matched = true;
+      }
+    });
+    if (!matched) {
+      // Add option if not present
+      var opt = document.createElement("option");
+      opt.value = interestParam;
+      opt.textContent = interestParam;
+      interestSelect.appendChild(opt);
+      interestSelect.value = interestParam;
+    }
+  }
+
+  // Full Circle signup mailto fallback (same pattern as contact)
+  var signup = document.getElementById("fullcircle-form");
+  if (signup) {
+    signup.addEventListener("submit", function (e) {
+      var action = (signup.getAttribute("action") || "").trim();
+      if (action && action.indexOf("https://") === 0) return;
+      e.preventDefault();
+      var name = (signup.querySelector('[name="name"]') || {}).value || "";
+      var email = (signup.querySelector('[name="email"]') || {}).value || "";
+      var beach = (signup.querySelector('[name="preferred_beach"]') || {}).value || "";
+      var to = signup.getAttribute("data-mailto") || "sales@everwood-usa.com";
+      var subject = encodeURIComponent("Full Circle cleanup sign-up");
+      var body = encodeURIComponent(
+        "Name: " + name + "\n" +
+        "Email: " + email + "\n" +
+        "Preferred beach: " + beach + "\n\n" +
+        "I would like to join an upcoming Full Circle cleanup."
+      );
+      window.location.href = "mailto:" + to + "?subject=" + subject + "&body=" + body;
+    });
+  }
+
+  // Trace-your-piece: coming soon
+  var traceForm = document.getElementById("trace-form");
+  if (traceForm) {
+    traceForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var note = document.getElementById("trace-note");
+      if (note) {
+        note.textContent = "Tracing is coming soon. Your code was not sent — check back after we launch QR lookup.";
+        note.hidden = false;
+      }
+    });
+  }
+
 })();
