@@ -157,6 +157,8 @@ A yellow dashed box on the Contact page marks the Formspree insert point.
 
 ## To fill in (placeholders)
 
+
+
 Every bracketed placeholder used in the site — replace with verified facts only.
 
 ### University of Miami project
