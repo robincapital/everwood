@@ -1389,3 +1389,23 @@ ul { list-style: none; }
 }
 .legal-disclaimer strong { color: var(--bay-deep); }
 .sources-inline a { word-break: normal; overflow-wrap: anywhere; }
+
+/* Plank / kit color options (approximate swatches of the colors in stock) */
+.plank-colors-label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0.6rem 0 0.35rem;
+}
+.plank-colors { display: flex; flex-wrap: wrap; gap: 0.4rem 0.9rem; margin-bottom: 0.5rem; }
+.plank-color { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.88rem; color: var(--ink-soft); }
+.plank-swatch {
+  width: 18px; height: 18px; border-radius: 50%;
+  border: 2px solid white; box-shadow: 0 0 0 1px var(--border), var(--shadow-sm);
+}
+.sw-dark-brown { background: #4a3324; }
+.sw-light-grey { background: #c4c7c8; }
+.sw-miami-pink { background: #f29bbd; }
+.sw-miami-teal { background: #1fb3ad; }
