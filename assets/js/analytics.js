@@ -7,7 +7,7 @@
  * While a value is still its placeholder, that service is not loaded at all
  * (and the cookie notice is not shown).
  */
-const CF_BEACON_TOKEN = 'CF_TOKEN_PLACEHOLDER';
+const CF_BEACON_TOKEN = '99e4de7a56764908be7d3b12532f3a66';
 const GA_MEASUREMENT_ID = 'G-LTM2HWY9ND';
 
 (function () {
