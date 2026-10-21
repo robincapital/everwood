@@ -7,7 +7,7 @@ The site is static HTML, CSS, and JavaScript, with no build step. GitHub Pages s
 ## Folder structure
 
 - `index.html` — home page
-- `pages/` — About, Products, Projects, Partnerships, Impact, Shop, Full Circle, Contact, and Credits
+- `pages/` — About, Products, Projects, Partnerships, Impact, Shop, Full Circle, Investors, Contact, and Credits
 - `assets/css/` — stylesheets
 - `assets/js/` — site JavaScript
 - `assets/img/` — photographs, product images, and logos

@@ -47,9 +47,11 @@
   }
 
 
-  // Prefill contact interest from ?interest= or ?subject=
+  // Prefill contact interest from ?interest=, ?subject= or ?product= (shop fallback links)
   var params = new URLSearchParams(window.location.search);
-  var interestParam = params.get("interest") || params.get("subject");
+  var productParam = params.get("product");
+  var interestParam = params.get("interest") || params.get("subject") ||
+    (productParam ? "Shop order: " + productParam : null);
   var interestSelect = document.getElementById("interest");
   if (interestSelect && interestParam) {
     var matched = false;
@@ -69,6 +71,16 @@
       interestSelect.value = interestParam;
     }
   }
+
+  // Shop: Stripe Payment Links. Buttons carry data-stripe-link; until a real
+  // https://buy.stripe.com/... URL is pasted in, the href stays on the contact page.
+  document.querySelectorAll("a[data-stripe-link]").forEach(function (a) {
+    var link = (a.getAttribute("data-stripe-link") || "").trim();
+    if (link.indexOf("https://buy.stripe.com/") === 0) {
+      a.setAttribute("href", link);
+      a.setAttribute("rel", "noopener");
+    }
+  });
 
   // Full Circle signup mailto fallback (same pattern as contact)
   var signup = document.getElementById("fullcircle-form");
