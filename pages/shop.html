@@ -29,6 +29,7 @@
           <li><a href="../pages/projects.html">Projects</a></li>
           <li><a href="../pages/shop.html" aria-current="page">Shop</a></li>
           <li><a href="../pages/full-circle.html">Full Circle</a></li>
+          <li><a href="../pages/investors.html">Investors</a></li>
           <li><a class="nav-cta" href="../pages/contact.html">Contact</a></li>
         </ul>
       </nav>
@@ -65,7 +66,20 @@
          product prefilled, so orders arrive as inquiries.
       4. In each Payment Link, turn on "Collect customers' addresses" / phone if you need delivery
          details, and set the confirmation page to show pickup instructions (11 Island Ave, Miami Beach).
-      5. Replace every [price] on this page with the same price used in Stripe.
+      5. Prices: each item currently shows "Price on request". When prices are set, replace that text
+         (class="price-placeholder") with the same price used in Stripe.
+
+      DRAFT KIT / LUMBER SPECS (from the shop draft; not shown until Nick confirms):
+        Planter Box Kit: 20 pre-cut parts (4 long sides + 4 ends in 1x4; 4 corner posts + 8 floor slats in 1x2);
+          finished ~17.7 x 7.9 x 8.9 in (450 x 200 x 225 mm); ages 6+ with adult help, 10+ with light supervision;
+          ~20 lbs (9 kg) plastic, est. from ~15 lbs per standard board; QR to how-to video.
+        Bird House Kit: 12 pre-cut parts (2 front, 2 back, 2 sides, floor in 1x4; back top rail + 4 roof slats in 1x2);
+          finished ~7.9 W x 8.3 D x 10.8 H in (200 x 210 x 275 mm); entrance sized for small cavity nesters such as
+          Carolina wrens (hole size TBC); ~10 lbs (4.5 kg) plastic; QR to how-to + placement tips.
+        1x2 planks: ~2 x 1 in (50 x 25 mm); 1x4 planks: ~4 x 1 in (100 x 25 mm); length 2.8 m / 9 ft 2 in; colors TBC.
+        Pallet count TBC. Group pricing TBC.
+        DIY ideas: planter 3 ft x 1 ft two boards high ~3 x 1x4 + 1 x 1x2; 4 ft backless bench ~4 x 1x4 + 1 x 1x2;
+          4 ft x 2 ft raised bed three boards high ~5 x 1x4 + 1 x 1x2.
     -->
 
     <section class="section" id="kits">
@@ -78,46 +92,42 @@
         <div class="shop-grid">
 
           <article class="card shop-card" id="kit-planter-box">
-            <div class="card-img ph" data-ph="planter-box-kit.jpg"><img src="../assets/img/product-colors.jpg" alt="Everwood recycled-plastic boards in several colors — placeholder photo for the planter box kit" /></div>
+            <div class="card-img ph" data-ph="planter-box-kit.jpg"><img src="../assets/img/product-colors.jpg" alt="Everwood recycled-plastic board samples in six colors" /></div>
             <div class="card-body">
               <span class="badge badge-soon">Launch kit · DIY</span>
               <h3>Planter Box Kit</h3>
               <p>A two-course herb or flower box that never rots, splinters, or needs paint — made to sit on a Miami balcony or school garden for years.</p>
               <ul class="check-list mt-1" style="font-size:0.92rem">
-                <li>20 pre-cut parts: 4 long sides + 4 ends (1x4), 4 corner posts + 8 floor slats (1x2) <span class="placeholder-note">[confirm plank counts/dimensions]</span></li>
+                <li>Pre-cut parts from 1x2 and 1x4 recycled-plastic boards</li>
                 <li>Holes pre-drilled by us; drainage gaps built into the floor</li>
                 <li>Exterior-grade (stainless) wood screws + spares and a T25 star bit</li>
-                <li>Picture instructions with a QR code to the how-to video <span class="placeholder-note">[confirm link]</span></li>
+                <li>Step-by-step picture instructions</li>
               </ul>
-              <p style="font-size:0.9rem;color:var(--ink-soft);flex:0"><strong>Finished size:</strong> about 17.7 × 7.9 × 8.9 in (450 × 200 × 225 mm) <span class="placeholder-note">[confirm]</span><br />
-              <strong>Ages:</strong> 6+ with adult help; 10+ with light supervision <span class="placeholder-note">[confirm]</span><br />
-              <strong>Plastic kept in use:</strong> about 20 lbs (9 kg), estimated from ~15 lbs per standard board <span class="placeholder-note">[confirm]</span></p>
-              <p class="price-placeholder">[price] <span class="placeholder-note">placeholder</span></p>
+              <p style="font-size:0.9rem;color:var(--ink-soft);flex:0">Great for families and classrooms; younger builders will want an adult helper. Ask us for the finished size and parts list.</p>
+              <p class="price-placeholder">Price on request</p>
               <div class="hero-actions">
-                <a class="btn btn-solid" data-stripe-link="[STRIPE_LINK_KIT_PLANTER]" href="contact.html?product=kit-planter-box">Buy kit</a>
+                <a class="btn btn-solid" data-stripe-link="[STRIPE_LINK_KIT_PLANTER]" href="contact.html?product=kit-planter-box">Order or ask for a price</a>
               </div>
               <p class="coming-soon-note">Build it together, then <a href="full-circle.html">join a Biscayne Bay cleanup</a>.</p>
             </div>
           </article>
 
           <article class="card shop-card" id="kit-bird-house">
-            <div class="card-img ph" data-ph="bird-house-kit.jpg — photo coming soon"></div>
+            <div class="card-img ph" data-ph="Everwood Bird House Kit" role="img" aria-label="Bird House Kit"></div>
             <div class="card-body">
               <span class="badge badge-soon">Launch kit · DIY</span>
               <h3>Bird House Kit</h3>
-              <p>A small-cavity nest box with a sloped roof, vent and drainage holes, and a screw-off floor for yearly cleanout. Entrance sized for small native cavity nesters such as Carolina wrens <span class="placeholder-note">[confirm hole size]</span>.</p>
+              <p>A small-cavity nest box with a sloped roof, vent and drainage holes, and a screw-off floor for yearly cleanout. Designed for small native cavity-nesting birds.</p>
               <ul class="check-list mt-1" style="font-size:0.92rem">
-                <li>12 pre-cut parts: 2 front, 2 back, 2 sides and a floor (1x4); a back top rail and 4 roof slats (1x2) <span class="placeholder-note">[confirm plank counts/dimensions]</span></li>
+                <li>Pre-cut parts from 1x2 and 1x4 recycled-plastic boards</li>
                 <li>Entrance, vent, drainage and screw holes pre-drilled by us</li>
                 <li>Exterior-grade (stainless) wood screws + spares and a T25 star bit</li>
-                <li>Picture instructions + QR to the how-to and bird-house placement tips <span class="placeholder-note">[confirm link]</span></li>
+                <li>Step-by-step picture instructions</li>
               </ul>
-              <p style="font-size:0.9rem;color:var(--ink-soft);flex:0"><strong>Finished size:</strong> about 7.9 W × 8.3 D × 10.8 H in (200 × 210 × 275 mm) <span class="placeholder-note">[confirm]</span><br />
-              <strong>Ages:</strong> 6+ with adult help; 10+ with light supervision <span class="placeholder-note">[confirm]</span><br />
-              <strong>Plastic kept in use:</strong> about 10 lbs (4.5 kg), estimated from ~15 lbs per standard board <span class="placeholder-note">[confirm]</span></p>
-              <p class="price-placeholder">[price] <span class="placeholder-note">placeholder</span></p>
+              <p style="font-size:0.9rem;color:var(--ink-soft);flex:0">Great for families and classrooms; younger builders will want an adult helper. Ask us for the finished size and parts list.</p>
+              <p class="price-placeholder">Price on request</p>
               <div class="hero-actions">
-                <a class="btn btn-solid" data-stripe-link="[STRIPE_LINK_KIT_BIRDHOUSE]" href="contact.html?product=kit-bird-house">Buy kit</a>
+                <a class="btn btn-solid" data-stripe-link="[STRIPE_LINK_KIT_BIRDHOUSE]" href="contact.html?product=kit-bird-house">Order or ask for a price</a>
               </div>
               <p class="coming-soon-note">Build it together, then <a href="full-circle.html">join a Biscayne Bay cleanup</a>.</p>
             </div>
@@ -139,7 +149,7 @@
             <div class="card-body">
               <span class="badge badge-bulk">Groups &amp; education</span>
               <h3>Kits for schools, camps &amp; events</h3>
-              <p>Class sets, scout badge projects, summer camps, team-building days, and cleanup-day build stations. We can cut kits in your colors, add a talk on where the plastic comes from, and pair the build with a Full Circle beach cleanup. Group pricing <span class="placeholder-note">[confirm]</span>.</p>
+              <p>Class sets, scout badge projects, summer camps, team-building days, and cleanup-day build stations. We can cut kits in your colors, add a talk on where the plastic comes from, and pair the build with a Full Circle beach cleanup. Ask us for group pricing.</p>
               <div class="hero-actions mt-1">
                 <a class="btn btn-solid" href="contact.html?interest=DIY%20kits%20for%20schools%2C%20camps%20%26%20events">Request a quote</a>
               </div>
@@ -170,14 +180,12 @@
               <span class="badge badge-bulk">In stock</span>
               <h3>1x2 planks</h3>
               <p>Slim boards for trim, slats, planter frames, trellises, and kids' projects.</p>
-              <p style="font-size:0.9rem;color:var(--ink-soft);flex:0"><strong>Size:</strong> about 2 × 1 in (50 × 25 mm) <span class="placeholder-note">[confirm size]</span><br />
-              <strong>Length:</strong> 2.8 m / 9 ft 2 in <span class="placeholder-note">[confirm length]</span><br />
-              <strong>Color:</strong> <span class="placeholder-note">[confirm color]</span></p>
-              <p class="price-placeholder">[price] <span style="font-size:0.9rem;color:var(--ink-soft)">per plank</span> <span class="placeholder-note">placeholder</span></p>
-              <p style="font-size:0.9rem;color:var(--ink-soft);flex:0">10-pack: <strong>[price]</strong> <span class="placeholder-note">placeholder</span></p>
+              <p style="font-size:0.9rem;color:var(--ink-soft);flex:0">Nominal 1x2. Ask us for exact dimensions, lengths, and colors in stock.</p>
+              <p class="price-placeholder">Price on request</p>
+              <p style="font-size:0.9rem;color:var(--ink-soft);flex:0">Single planks or 10-packs.</p>
               <div class="hero-actions mt-1">
-                <a class="btn btn-solid" data-stripe-link="[STRIPE_LINK_1X2]" href="contact.html?product=1x2-planks">Buy</a>
-                <a class="btn btn-outline" data-stripe-link="[STRIPE_LINK_1X2_10PACK]" href="contact.html?product=1x2-planks-10-pack">Buy 10-pack</a>
+                <a class="btn btn-solid" data-stripe-link="[STRIPE_LINK_1X2]" href="contact.html?product=1x2-planks">Order</a>
+                <a class="btn btn-outline" data-stripe-link="[STRIPE_LINK_1X2_10PACK]" href="contact.html?product=1x2-planks-10-pack">Order 10-pack</a>
               </div>
             </div>
           </article>
@@ -187,14 +195,12 @@
               <span class="badge badge-bulk">In stock</span>
               <h3>1x4 planks</h3>
               <p>All-round boards for benches, raised beds, table tops, fence boards, and planter walls.</p>
-              <p style="font-size:0.9rem;color:var(--ink-soft);flex:0"><strong>Size:</strong> about 4 × 1 in (100 × 25 mm) <span class="placeholder-note">[confirm size]</span><br />
-              <strong>Length:</strong> 2.8 m / 9 ft 2 in <span class="placeholder-note">[confirm length]</span><br />
-              <strong>Color:</strong> <span class="placeholder-note">[confirm color]</span></p>
-              <p class="price-placeholder">[price] <span style="font-size:0.9rem;color:var(--ink-soft)">per plank</span> <span class="placeholder-note">placeholder</span></p>
-              <p style="font-size:0.9rem;color:var(--ink-soft);flex:0">10-pack: <strong>[price]</strong> <span class="placeholder-note">placeholder</span></p>
+              <p style="font-size:0.9rem;color:var(--ink-soft);flex:0">Nominal 1x4. Ask us for exact dimensions, lengths, and colors in stock.</p>
+              <p class="price-placeholder">Price on request</p>
+              <p style="font-size:0.9rem;color:var(--ink-soft);flex:0">Single planks or 10-packs.</p>
               <div class="hero-actions mt-1">
-                <a class="btn btn-solid" data-stripe-link="[STRIPE_LINK_1X4]" href="contact.html?product=1x4-planks">Buy</a>
-                <a class="btn btn-outline" data-stripe-link="[STRIPE_LINK_1X4_10PACK]" href="contact.html?product=1x4-planks-10-pack">Buy 10-pack</a>
+                <a class="btn btn-solid" data-stripe-link="[STRIPE_LINK_1X4]" href="contact.html?product=1x4-planks">Order</a>
+                <a class="btn btn-outline" data-stripe-link="[STRIPE_LINK_1X4_10PACK]" href="contact.html?product=1x4-planks-10-pack">Order 10-pack</a>
               </div>
             </div>
           </article>
@@ -203,7 +209,7 @@
             <div class="card-body">
               <span class="badge badge-bulk">Bulk &amp; trade</span>
               <h3>Whole pallet / bulk &amp; contractor pricing</h3>
-              <p>Contractors, landscapers, schools, and HOAs: take the whole pallet or a mixed bulk order. Pallet count <span class="placeholder-note">[confirm quantity]</span>. Pickup in Miami Beach or delivery in Miami-Dade.</p>
+              <p>Contractors, landscapers, schools, and HOAs: take the whole pallet or a mixed bulk order. Pickup in Miami Beach or delivery in Miami-Dade.</p>
               <p class="price-placeholder" style="font-size:1rem;color:var(--ink-soft)">Quote on request</p>
               <div class="hero-actions">
                 <a class="btn btn-solid" href="contact.html?interest=Bulk%20lumber%20%26%20public%20furniture">Request a quote</a>
@@ -216,15 +222,15 @@
         <div class="grid-3 mt-2">
           <div class="card"><div class="card-body">
             <h3>Planter box</h3>
-            <p>A 3 ft × 1 ft box, two boards high: about 3 × 1x4 for the walls and floor plus 1 × 1x2 for corner posts. <span class="placeholder-note">[confirm]</span></p>
+            <p>A long, low box for herbs or flowers: 1x4 walls and floor, with 1x2 corner posts.</p>
           </div></div>
           <div class="card"><div class="card-body">
             <h3>Garden bench</h3>
-            <p>A 4 ft backless bench: about 4 × 1x4 for the seat, aprons, and doubled legs plus 1 × 1x2 for bracing. <span class="placeholder-note">[confirm]</span></p>
+            <p>A simple backless bench: 1x4 for the seat, aprons, and doubled legs, with 1x2 for bracing.</p>
           </div></div>
           <div class="card"><div class="card-body">
             <h3>Raised bed</h3>
-            <p>A 4 ft × 2 ft bed, three boards high (about 12 in): about 5 × 1x4 for the walls plus 1 × 1x2 for corner stakes. <span class="placeholder-note">[confirm]</span></p>
+            <p>A rot-proof garden bed: stacked 1x4 walls with 1x2 corner stakes. Tell us your size and we’ll help work out how many boards you need.</p>
           </div></div>
         </div>
         <p class="mt-2" style="font-size:0.9rem;color:var(--muted);max-width:44em">Tips: cut with a carbide-tipped blade at moderate speed, and use exterior-grade (stainless or coated) wood screws. A pilot hole makes driving screws easier. Leave a small gap where long boards meet so they can move with the heat.</p>
@@ -242,7 +248,7 @@
 
           <article class="card shop-card">
             <div class="card-img ph" data-ph="pendant-bay-edition.jpg">
-              <img src="../assets/img/pendant-bay-edition.jpg" alt="Bay Edition recycled-plastic pendant necklace — placeholder photo" width="1200" height="1200" />
+              <img src="../assets/img/pendant-bay-edition.jpg" alt="Bay Edition pendant — made from Miami Beach cleanup plastic" width="1200" height="1200" />
             </div>
             <div class="card-body">
               <span class="badge badge-soon">Coming soon / limited drop</span>
@@ -293,33 +299,33 @@
           <article class="card shop-card">
             <div class="card-img ph" data-ph="beach-paddle"><img src="../assets/img/molded/beach-paddle.jpg" alt="Yellow molded beach paddle" /></div>
             <div class="card-body">
-              <span class="badge badge-confirm">[confirm product]</span>
+              <span class="badge badge-soon">In development</span>
               <h3>Beach paddle</h3>
-              <p>Molded paddle with a Miami beach story — confirm before firm retail listing.</p>
+              <p>Molded recycled-plastic beach paddle with a Miami beach story. Join the list to hear when it’s ready.</p>
               <div class="hero-actions mt-1"><a class="btn btn-outline" href="contact.html?interest=beach-paddle">Coming soon — join the list</a></div>
             </div>
           </article>
 
           <article class="card shop-card">
             <div class="card-img ph" data-ph="product-bench.jpg">
-              <img src="../assets/img/product-bench.jpg" alt="Everwood residential bench — product placeholder" />
+              <img src="../assets/img/product-bench.jpg" alt="Everwood bench made from recycled-plastic lumber (University of Miami install)" />
             </div>
             <div class="card-body">
               <span class="badge badge-bulk">Made to order</span>
               <h3>Everwood bench, residential</h3>
-              <p>Residential-scale bench in plastic lumber — same outdoor durability as our public furniture, sized for home or small courtyard use. Specs <span class="placeholder-note">[confirm]</span>.</p>
+              <p>Residential-scale bench in plastic lumber — same outdoor durability as our public furniture, sized for home or small courtyard use. Tell us your space and we’ll quote sizes and specs.</p>
               <div class="hero-actions mt-1"><a class="btn btn-solid" href="contact.html?interest=Made-to-order%20residential%20bench">Made to order — request a quote</a></div>
             </div>
           </article>
 
           <article class="card shop-card">
             <div class="card-img ph" data-ph="product-colors-wet.jpg">
-              <img src="../assets/img/product-colors-wet.jpg" alt="Everwood board colors — placeholder photo for assembled planter boxes" />
+              <img src="../assets/img/product-colors-wet.jpg" alt="Wet Everwood boards in several colors" />
             </div>
             <div class="card-body">
               <span class="badge badge-bulk">Made to order</span>
               <h3>Everwood planter box, assembled</h3>
-              <p>Larger residential planters built to your size in recycled-plastic lumber. Color and size options <span class="placeholder-note">[confirm]</span>. Prefer to build your own? See the <a href="#kit-planter-box">Planter Box Kit</a>.</p>
+              <p>Larger residential planters built to your size in recycled-plastic lumber. Ask us about colors and sizes. Prefer to build your own? See the <a href="#kit-planter-box">Planter Box Kit</a>.</p>
               <div class="hero-actions mt-1"><a class="btn btn-solid" href="contact.html?interest=Made-to-order%20planter%20box">Made to order — request a quote</a></div>
             </div>
           </article>
@@ -345,33 +351,33 @@
         <div class="section-header">
           <p class="eyebrow" style="color:var(--bay-teal)">Everwood merch</p>
           <h2>Wear the mission</h2>
-          <p>Everwood-branded basics in recycled and organic materials. Proceeds support Biscayne Bay cleanups <span class="placeholder-note">[confirm]</span>.</p>
+          <p>Everwood-branded basics are in the works, for beach days and cleanup crews. Join the list to hear when they drop.</p>
         </div>
         <div class="grid-3">
           <article class="card">
-            <div class="card-img ph" data-ph="Recycled-material tee — [coming soon]"></div>
+            <div class="card-img ph" data-ph="Everwood tee" role="img" aria-label="Everwood tee"></div>
             <div class="card-body">
-              <span class="badge badge-soon">[coming soon]</span>
-              <h3>Recycled-material tee</h3>
-              <p>Soft tee in recycled / organic fabric with the Everwood mark. Sizes and colors <span class="placeholder-note">[confirm]</span>.</p>
+              <span class="badge badge-soon">Coming soon</span>
+              <h3>Everwood tee</h3>
+              <p>Soft tee with the Everwood mark.</p>
               <div class="hero-actions mt-1"><a class="btn btn-outline" href="contact.html?interest=merch-tee">Join the list</a></div>
             </div>
           </article>
           <article class="card">
-            <div class="card-img ph" data-ph="Everwood cap — [coming soon]"></div>
+            <div class="card-img ph" data-ph="Everwood cap" role="img" aria-label="Everwood cap"></div>
             <div class="card-body">
-              <span class="badge badge-soon">[coming soon]</span>
+              <span class="badge badge-soon">Coming soon</span>
               <h3>Everwood cap</h3>
-              <p>Embroidered cap for beach days and cleanup crews. Material <span class="placeholder-note">[confirm]</span>.</p>
+              <p>Embroidered cap for beach days and cleanup crews.</p>
               <div class="hero-actions mt-1"><a class="btn btn-outline" href="contact.html?interest=merch-cap">Join the list</a></div>
             </div>
           </article>
           <article class="card">
-            <div class="card-img ph" data-ph="Recycled tote — [coming soon]"></div>
+            <div class="card-img ph" data-ph="Everwood tote" role="img" aria-label="Everwood tote"></div>
             <div class="card-body">
-              <span class="badge badge-soon">[coming soon]</span>
-              <h3>Recycled tote</h3>
-              <p>Everyday tote in recycled or organic canvas — handy for groceries and for hauling cleanup finds. <span class="placeholder-note">[confirm]</span></p>
+              <span class="badge badge-soon">Coming soon</span>
+              <h3>Everwood tote</h3>
+              <p>Everyday tote, handy for groceries and for hauling cleanup finds.</p>
               <div class="hero-actions mt-1"><a class="btn btn-outline" href="contact.html?interest=merch-tote">Join the list</a></div>
             </div>
           </article>
@@ -406,6 +412,7 @@
           <a href="../pages/projects.html">Projects</a>
           <a href="../pages/impact.html">Impact</a>
           <a href="../pages/partnerships.html">Partnerships</a>
+          <a href="../pages/investors.html">Investors</a>
         </div>
         <div class="footer-col">
           <h4>Shop &amp; community</h4>
@@ -416,13 +423,14 @@
         </div>
         <div class="footer-col">
           <h4>Connect</h4>
-          <a href="https://everwood-usa.com" rel="noopener">everwood-usa.com</a>
-          <a href="https://desafioambiente.com" rel="noopener">desafioambiente.com</a>
-          <a href="https://www.instagram.com/everwood_maderaplastica/" rel="noopener">@everwood_maderaplastica</a>
+          <a href="mailto:sales@everwood-usa.com">sales@everwood-usa.com</a>
+          <a href="https://desafioambiente.com" rel="noopener">desafioambiente.com (partner)</a>
+          <a href="https://everwood.cl" rel="noopener">everwood.cl (partner)</a>
+          <a href="https://www.instagram.com/everwood_maderaplastica/" rel="noopener">@everwood_maderaplastica (Everwood Chile)</a>
         </div>
       </div>
       <div class="footer-bottom">
-        <span>© <span id="y"></span> Everwood USA. First-draft site.</span>
+        <span>© <span id="y"></span> Everwood USA · 11 Island Ave, Miami Beach, FL 33139</span>
         <span>Miami Beach, FL · Miami &amp; Biscayne Bay focus</span>
       </div>
     </div>

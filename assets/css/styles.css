@@ -1342,3 +1342,50 @@ ul { list-style: none; }
 }
 .founder-strip p { margin: 0; color: var(--ink-soft); font-size: 0.98rem; max-width: 40em; }
 .founder-strip strong { color: var(--bay-deep); }
+
+/* —— Investors page —— */
+.invest-list { display: grid; gap: 1rem; }
+.invest-item {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 1rem;
+  align-items: center;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.1rem 1.35rem;
+}
+.invest-item h3 { font-size: 1.05rem; color: var(--bay-deep); margin-bottom: 0.25rem; }
+.invest-item p { margin: 0; color: var(--ink-soft); font-size: 0.95rem; }
+.invest-amount {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--brand-green-deep);
+  background: var(--bay-mist);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.35rem 0.8rem;
+  white-space: nowrap;
+}
+@media (max-width: 640px) {
+  .invest-item { grid-template-columns: 1fr; }
+  .invest-amount { justify-self: start; white-space: normal; }
+}
+.link-soon {
+  display: inline-block;
+  margin-top: 1rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--muted);
+  cursor: default;
+}
+.legal-disclaimer {
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  background: var(--sand);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.25rem 1.5rem;
+}
+.legal-disclaimer strong { color: var(--bay-deep); }
+.sources-inline a { word-break: normal; overflow-wrap: anywhere; }

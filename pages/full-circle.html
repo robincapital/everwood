@@ -29,6 +29,7 @@
           <li><a href="../pages/projects.html">Projects</a></li>
           <li><a href="../pages/shop.html">Shop</a></li>
           <li><a href="../pages/full-circle.html" aria-current="page">Full Circle</a></li>
+          <li><a href="../pages/investors.html">Investors</a></li>
           <li><a class="nav-cta" href="../pages/contact.html">Contact</a></li>
         </ul>
       </nav>
@@ -129,22 +130,13 @@
       <div class="container">
         <div class="section-header">
           <h2>Upcoming cleanups</h2>
-          <p>Dates and beaches to be confirmed — placeholders only.</p>
+          <p>We clean beaches and shorelines around Miami Beach and Biscayne Bay. Dates and meeting points go out by email to everyone on the sign-up list.</p>
         </div>
+        <!-- When dates are set, list them here with .cleanup-list / .cleanup-item (date, beach, Sign up button). -->
         <div class="cleanup-list">
           <div class="cleanup-item">
-            <span class="cleanup-date">[date]</span>
-            <span><strong>[beach]</strong> · Miami Beach / Biscayne Bay area</span>
-            <a class="btn btn-outline" href="#signup" style="padding:0.5rem 1rem;font-size:0.85rem">Sign up</a>
-          </div>
-          <div class="cleanup-item">
-            <span class="cleanup-date">[date]</span>
-            <span><strong>[beach]</strong> · Miami Beach / Biscayne Bay area</span>
-            <a class="btn btn-outline" href="#signup" style="padding:0.5rem 1rem;font-size:0.85rem">Sign up</a>
-          </div>
-          <div class="cleanup-item">
-            <span class="cleanup-date">[date]</span>
-            <span><strong>[beach]</strong> · Miami Beach / Biscayne Bay area</span>
+            <span class="cleanup-date">Next cleanup</span>
+            <span>Miami Beach / Biscayne Bay area · date and meeting point sent to the sign-up list</span>
             <a class="btn btn-outline" href="#signup" style="padding:0.5rem 1rem;font-size:0.85rem">Sign up</a>
           </div>
         </div>
@@ -171,12 +163,13 @@
                 <input id="fc-beach" name="preferred_beach" type="text" placeholder="e.g. South Beach, Crandon…" required />
               </div>
               <button class="btn btn-solid" type="submit">Sign up</button>
-              <p class="form-hint">Without a Formspree endpoint, submit opens your email client (mailto).</p>
+              <p class="form-hint">Signing up opens your email app with a message addressed to sales@everwood-usa.com.</p>
             </form>
-            <div class="formspree-marker" role="note">
-              <strong>FORMSPREE ENDPOINT — INSERT HERE</strong><br />
-              Set this form’s <code>action</code> to <code>https://formspree.io/f/YOUR_ID</code> and keep <code>method="POST"</code>. When <code>action</code> starts with <code>https://</code>, mailto steps aside.
-            </div>
+            <!--
+              NOTE: this signup currently only opens a mailto (assets/js/main.js). Left as is on purpose.
+              To collect signups without email: set this form's action to a Formspree endpoint and keep
+              method="POST". When action starts with https://, the mailto script steps aside.
+            -->
           </div>
 
 
@@ -186,7 +179,7 @@
               <div>
                 <p class="eyebrow" style="color:var(--bay-teal);margin-bottom:0.35rem">On every install</p>
                 <h3 style="font-family:var(--font-display);color:var(--bay-deep);font-size:1.15rem;margin-bottom:0.35rem">Scan any Everwood bench</h3>
-                <p style="font-size:0.9rem;color:var(--ink-soft);margin:0">Installed pieces carry a metal QR plaque that links to <strong>everwood-usa.com</strong>. When this site is on that domain, scanners arrive here. Per-piece tracing is still coming soon (below).</p>
+                <p style="font-size:0.9rem;color:var(--ink-soft);margin:0">Installed pieces carry a metal QR plaque that links to <strong>everwood-usa.com</strong> — this site. Per-piece tracing is coming soon (below).</p>
               </div>
             </div>
           </div>
@@ -199,7 +192,7 @@
               <button class="btn btn-solid" type="submit">Look up</button>
             </form>
             <p id="trace-note" class="coming-soon-note" hidden></p>
-            <p class="coming-soon-note">Lookup is <strong>coming soon</strong>. Codes will resolve to cleanup date, beach, and pounds collected — no invented stats on this page.</p>
+            <p class="coming-soon-note">Lookup is <strong>coming soon</strong>. Codes will resolve to cleanup date, beach, and pounds collected.</p>
           </div>
         </div>
       </div>
@@ -231,6 +224,7 @@
           <a href="../pages/projects.html">Projects</a>
           <a href="../pages/impact.html">Impact</a>
           <a href="../pages/partnerships.html">Partnerships</a>
+          <a href="../pages/investors.html">Investors</a>
         </div>
         <div class="footer-col">
           <h4>Shop &amp; community</h4>
@@ -241,13 +235,14 @@
         </div>
         <div class="footer-col">
           <h4>Connect</h4>
-          <a href="https://everwood-usa.com" rel="noopener">everwood-usa.com</a>
-          <a href="https://desafioambiente.com" rel="noopener">desafioambiente.com</a>
-          <a href="https://www.instagram.com/everwood_maderaplastica/" rel="noopener">@everwood_maderaplastica</a>
+          <a href="mailto:sales@everwood-usa.com">sales@everwood-usa.com</a>
+          <a href="https://desafioambiente.com" rel="noopener">desafioambiente.com (partner)</a>
+          <a href="https://everwood.cl" rel="noopener">everwood.cl (partner)</a>
+          <a href="https://www.instagram.com/everwood_maderaplastica/" rel="noopener">@everwood_maderaplastica (Everwood Chile)</a>
         </div>
       </div>
       <div class="footer-bottom">
-        <span>© <span id="y"></span> Everwood USA. First-draft site.</span>
+        <span>© <span id="y"></span> Everwood USA · 11 Island Ave, Miami Beach, FL 33139</span>
         <span>Miami Beach, FL · Miami &amp; Biscayne Bay focus</span>
       </div>
     </div>
